@@ -3,7 +3,13 @@ var buttonRight = document.querySelector('.right');
 var pagination = document.querySelectorAll('.pagination span');
 var count = 1;
 
-slider(count);
+tick();
+function tick() {
+    slider(count);
+    count++;
+    setTimeout(tick, 5000);
+}
+
 
 buttonLeft.addEventListener('click', function(){
     slider(count += -1);
@@ -37,7 +43,7 @@ function slider(c) {
     }
     
     for(var i = 0; i < imgSlide.length; i++) {
-        imgSlide[i].style.display = 'none';
+        imgSlide[i].style.opacity = 0;
     }
     
     for(var i = 0; i < pagination.length; i++) {
@@ -45,6 +51,7 @@ function slider(c) {
     }
     
 
-    imgSlide[count - 1].style.display = 'block';
+    imgSlide[count - 1].style.opacity = 1;
     pagination[count - 1].classList.add('fill');
+
 }

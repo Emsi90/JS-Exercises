@@ -21,10 +21,15 @@ body {
         overflow: hidden;
         border: 5px solid #293f5a;
         box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.4);
+        transition: 0.5s;
         
         & img {
-            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
             max-width: 100%;
+            transition: 0.3s;
         }
         
         .left, .right {
@@ -41,6 +46,7 @@ body {
             background: #fff;
             border-radius: 50%;
             opacity: .4;
+            transition: 0.3s;
             
             &:hover {
                 opacity: .8;
@@ -73,6 +79,7 @@ body {
                 background: #ffffff;
                 border-radius: 50%;
                 opacity: .4;
+                transition: 0.3s;
                 
                 &.fill {
                     opacity: .8;
