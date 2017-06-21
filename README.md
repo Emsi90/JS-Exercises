@@ -3,3 +3,4 @@
   2. <a href="https://emsi90.github.io/JS-Exercises/watch">Simple watch</a>
   3. <a href="https://emsi90.github.io/JS-Exercises/losowanie_ekstra_pensji">Losowanie ekstra pensji</a>
   4. <a href="https://emsi90.github.io/JS-Exercises/testimonials/dist">Testimonials</a>
+  5. <a href="https://emsi90.github.io/JS-Exercises/licznik">Licznik</a>
