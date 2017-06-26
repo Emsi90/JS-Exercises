@@ -13,11 +13,11 @@
         var numbers = [];
         var random;
         for (var i = 0; i < 5; i++) {
-            random = getRandom(1, 49);
+            random = getRandom(1, 35);
             
             while(numbers.indexOf(random) !== -1) {
                 console.log('Powtorzylas sie liczba ' + random);
-                random = getRandom(1, 49);
+                random = getRandom(1, 35);
             }
             numbers.push(random);
         }
