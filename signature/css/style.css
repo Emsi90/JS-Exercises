@@ -21,7 +21,7 @@ h1 {
     font-size: 1.8rem;
 }
 
-canvas {
+.canvas {
     margin: 40px 0;
     width: 800px;
     height: 300px;
