@@ -11,7 +11,46 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+    flex-direction: column;
   justify-content: center;
   align-items: center; 
 }
 
+h1 {
+    color: #FFF;
+    font-size: 1.8rem;
+}
+
+canvas {
+    margin: 40px 0;
+    width: 800px;
+    height: 300px;
+    background: #f4f4f4;
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.6);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    margin: 5px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #FFF;
+    border-radius: 4px;
+}
+a:hover {
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.2);
+}
+a.clear {
+    background: #d35a5a;
+}
+a.save {
+    background: #235188;
+}
