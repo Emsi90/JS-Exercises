@@ -22,6 +22,9 @@
                 return;
             }
             
+            if(e.isTrusted) {
+                e.preventDefault();
+            }
             console.log(e);
             var x = this.getX(e);
             var y = this.getY(e);
