@@ -23,7 +23,9 @@
             }
             
             if(e.isTrusted) {
-                e.preventDefault();
+                window.addEventListener('touchmove', function(e) {
+                    e.preventDefault();
+                }, false);
             }
             console.log(e);
             var x = this.getX(e);
