@@ -55,3 +55,12 @@ a.clear {
 a.save {
     background: #235188;
 }
+
+@media (max-width: 800px) {
+    
+    .canvas {
+        width: 90%;
+        height: 400px;
+    }
+    
+}
