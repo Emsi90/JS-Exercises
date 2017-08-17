@@ -21,11 +21,12 @@
             if(!this.mouseDown) {
                 return;
             }
-            
             if(e.isTrusted) {
-                this.disableScrollX();
+                this.disableScrollY();
             }
+            
             console.log(e);
+            
             var x = this.getX(e);
             var y = this.getY(e);
             
@@ -62,11 +63,18 @@
             
         },
         
-        disableScrollX: function() {
-          
-            document.addEventListener('touchmove', function(e) {
-                e.preventDefault();
-            }, false);
+        disableScrollY: function() {
+        
+            this.canvas.addEventListener('touchstart', function(e) {
+                this.container.style.overflow = 'hidden';
+                e.stopPropagation();
+            }.bind(this), false);
+            
+        },
+        
+        enableScrollY: function() {
+        
+            this.container.style.overflow = 'scroll';
             
         },
         
@@ -116,10 +124,13 @@
             this.canvas.addEventListener('touchleave', this.disableDrawing.bind(this), false);
             this.canvas.addEventListener('touchend', this.disableDrawing.bind(this), false);
             
+            this.container.addEventListener('touchmove', this.enableScrollY.bind(this), false);
+            
         },
         
         init: function() {
             
+            this.container = document.querySelector('.main');
             this.canvasCon = document.querySelector('.canvas');
             this.canvas = document.querySelector('canvas');
             this.save = document.querySelector('.save');
