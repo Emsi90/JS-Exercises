@@ -39,6 +39,8 @@
                 return e.offsetX;
             } else if (e.clientX) {
                 return e.clientX - boundries.left;
+            } else if (e.touches[0].clientX) {
+                return e.touches[0].clientX - boundries.left;
             }
             
         },
@@ -51,6 +53,8 @@
                 return e.offsetY;
             } else if (e.clientY) {
                 return e.clientY - boundries.top;
+            } else if (e.touches[0].clientY) {
+                return e.touches[0].clientY - boundries.top;
             }
             
         },
