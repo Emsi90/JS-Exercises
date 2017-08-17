@@ -23,7 +23,7 @@
             }
             
             if(e.isTrusted) {
-                window.addEventListener('touchmove', function(e) {
+                document.querySelector('body').addEventListener('touchmove', function(e) {
                     e.preventDefault();
                 }, false);
             }
