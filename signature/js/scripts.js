@@ -97,6 +97,8 @@
             
             this.canvas.addEventListener('touchmove', this.drawLines.bind(this), false);
             this.canvas.addEventListener('touchstart', this.enableDrawing.bind(this), false);
+            this.canvas.addEventListener('touchcancel', this.disableDrawing.bind(this), false);
+            this.canvas.addEventListener('touchleave', this.disableDrawing.bind(this), false);
             this.canvas.addEventListener('touchend', this.disableDrawing.bind(this), false);
             
         },
