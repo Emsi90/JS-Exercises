@@ -23,9 +23,7 @@
             }
             
             if(e.isTrusted) {
-                document.querySelector('body').addEventListener('touchmove', function(e) {
-                    e.preventDefault();
-                }, false);
+                this.disableScrollX();
             }
             console.log(e);
             var x = this.getX(e);
@@ -61,6 +59,14 @@
             } else if (e.touches[0].clientY) {
                 return e.touches[0].clientY - boundries.top;
             }
+            
+        },
+        
+        disableScrollX: function() {
+          
+            document.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, false);
             
         },
         
