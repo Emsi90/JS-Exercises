@@ -87,9 +87,17 @@
             this.ctx.lineCap = "round";
             this.ctx.strokeStyle = '#000000';
             
-            this.canvas.onmousemove = this.drawLines.bind(this);
-            this.canvas.onmousedown = this.enableDrawing.bind(this);
-            this.canvas.onmouseup = this.disableDrawing.bind(this);
+//            this.canvas.onmousemove = this.drawLines.bind(this);
+//            this.canvas.onmousedown = this.enableDrawing.bind(this);
+//            this.canvas.onmouseup = this.disableDrawing.bind(this);
+            
+            this.canvas.addEventListener('mousemove', this.drawLines.bind(this), false);
+            this.canvas.addEventListener('mousedown', this.enableDrawing.bind(this), false);
+            this.canvas.addEventListener('mouseup', this.disableDrawing.bind(this), false);
+            
+            this.canvas.addEventListener('touchmove', this.drawLines.bind(this), false);
+            this.canvas.addEventListener('touchstart', this.enableDrawing.bind(this), false);
+            this.canvas.addEventListener('touchend', this.disableDrawing.bind(this), false);
             
         },
         
