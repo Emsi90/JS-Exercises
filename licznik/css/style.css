@@ -21,11 +21,9 @@ body {
     color: #FFF;
     background: #233142;
 }
-/*
 .container:nth-child(even) {
     background: #252f3b;
 }
-*/
 .box {
     display: flex;
     flex-direction: row;
