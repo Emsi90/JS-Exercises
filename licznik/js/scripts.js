@@ -1,73 +1,47 @@
-var count = document.querySelectorAll('h3');
-var noRepeat = true;
-//var counter = 0;
-
-//function meter(number, time, mark) {
-//    
-//    function c() {
-//        if(counter <= number) {
-//            count.textContent = counter++ + mark;
-//            setTimeout(c, time);
-//        }
-//    }
-//    c();
-//}
-
-//function goInterval(el, counter) {
-//    
-//    var goCounter = setInterval(function(){
-//        
-//        
-//        if (counter <= 100) {
-//            el.textContent = counter++ + '%';
-//        } else {
-//            
-//            clearInterval(goCounter);
-//        }
-//    }, 100);
-//
-//}
-
-function startCounter() {
-
-
-count.forEach(function(el) {
+function Counter(counter, container) {
     
-//    noRepeat = 0;
-    var posTop = el.getBoundingClientRect().top;
-    var counter = 0;
-//    console.log(el.offsetTop - el.offsetTop);
-    console.log(posTop);
-    console.log(el.offsetTop);
-    if((posTop - el.offsetTop) < Math.round(scrollY) && noRepeat) {
-//        console.log('tak');
-//        console.log(el);
-//        console.log((el.offsetTop - 100));
+    this.counter = counter;
+    this.container = container;
+    this.noRepeat = true;
 
-//            goInterval(el, counter);
-        
-        var goCounter = setInterval(function(){
-        
-            noRepeat = false;
-        
-            if (counter <= 100) {
-                el.textContent = counter++ + '%';
-            } else {
-
-                clearInterval(goCounter);
-            }
-        }, 100);
-        
-    }
+    document.addEventListener('scroll', this.startCounter.bind(this), false);
     
-//    console.log(noRepeat);
-});
-
-
 }
 
-document.addEventListener('scroll', function() {
+Counter.prototype.startCounter = function() {
 
-    startCounter();
+    [].forEach.call(this.counter, function(elem) {
+        
+        
+        var posTop = (elem.offsetTop - this.container.offsetTop) + (this.container.offsetHeight / 2) - (elem.offsetHeight);
+        var register = 0;
+        
+//        console.log(this.container.offsetHeight);
+//        console.log(elem.offsetTop);
+//        console.log((elem.offsetTop));
+//        console.log(Math.round(scrollY));
+        if((elem.offsetTop - posTop) <= Math.round(scrollY) && this.noRepeat) {
+            
+//            console.log('yes');
+            
+            var goCounter = setInterval(function(){
+                
+                this.noRepeat = false;
+                if(register <= elem.dataset.scope) {
+                    elem.textContent = register++;
+                } else {
+                    clearInterval(goCounter);
+                }
+                
+            }.bind(this), 100);
+            
+        }
+        
+    }.bind(this));
     
-}, false);
+};
+
+var counterOne = new Counter(document.querySelectorAll('.counterOne'), document.querySelector('.conForCounterOne'));
+var counterTwo = new Counter(document.querySelectorAll('.counterTwo'), document.querySelector('.conForCounterTwo'));
+var counterTwo = new Counter(document.querySelectorAll('.counterThree'), document.querySelector('.conForCounterThree'));
+
