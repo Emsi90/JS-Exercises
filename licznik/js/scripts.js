@@ -32,11 +32,14 @@ function startCounter() {
 
 
 count.forEach(function(el) {
+    
 //    noRepeat = 0;
+    var posTop = el.getBoundingClientRect().top;
     var counter = 0;
-//    console.log(Math.round(scrollY));
-//    console.log((el.offsetTop));
-    if((el.offsetTop - el.offsetTop) < Math.round(scrollY) && noRepeat) {
+//    console.log(el.offsetTop - el.offsetTop);
+    console.log(posTop);
+    console.log(el.offsetTop);
+    if((posTop - el.offsetTop) < Math.round(scrollY) && noRepeat) {
 //        console.log('tak');
 //        console.log(el);
 //        console.log((el.offsetTop - 100));
@@ -57,7 +60,7 @@ count.forEach(function(el) {
         
     }
     
-    console.log(noRepeat);
+//    console.log(noRepeat);
 });
 
 
