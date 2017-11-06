@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*
+455D7A szaro grantatowy
+F95959 czerwony
+E3E3E3 szary
+*/
+
+body {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 62.5%;
+/*    background: #233142;*/
+}
+.container {
+/*    position: relative;*/
+	width: 100%;
+    height: 100vh;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    color: #FFF;
+    background: #233142;
+}
+.list {
+    list-style-type: decimal;
+    font-size: 1.2rem;
+}
+
+.list__item {
+    padding: 10px 0;
+}
+
+.list__link {
+    text-decoration: none;
+    color: #FFF;
+}
