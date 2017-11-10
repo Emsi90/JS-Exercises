@@ -39,46 +39,25 @@ body {
 .go-back:hover {
     box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.5);
 }
-.box {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
 }
 
-label {
-    padding-right: 10px;
-    font-size: 1rem;
-    color: #FFF;   
-}
-
-input {
-    font-size: 1rem;
-    color: #FFF;
-    padding: 10px;
-    width: 80px;
-    box-sizing: border-box;
-    background: #2e425c;
-    border: 0;
-    border-radius: 5px;
+.counter {
+    font-size: 2rem;
+    color: #e22d6b;
+    font-weight: bold;
 }
 
 .btn {
+    cursor: pointer;
     margin-top: 20px;
     font-size: 1rem;
     padding: 10px 20px;
     color: #FFF;
     border: 0;
     background: #33ac41;
-    border-radius: 5px;
-}
-
-output {
-    white-space: pre;
-    font-size: 1rem;
-    color: #FFF;
-    margin-top: 30px;
-    padding: 25px;
-    background: #1e2733;
     border-radius: 5px;
 }
