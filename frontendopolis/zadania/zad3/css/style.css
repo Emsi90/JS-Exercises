@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*
+455D7A szaro grantatowy
+F95959 czerwony
+E3E3E3 szary
+*/
+
+body {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 62.5%;
+/*    background: #233142;*/
+}
+.container {
+/*    position: relative;*/
+	width: 100%;
+    height: 100vh;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    color: #FFF;
+    background: #233142;
+}
+
+.go-back {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    padding: 15px 25px;
+    color: #fff;
+    background: #273c57;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+}
+
+.go-back:hover {
+    box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+.box {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+label {
+    padding-right: 10px;
+    font-size: 1rem;
+    color: #FFF;   
+}
+
+input {
+    font-size: 1rem;
+    color: #FFF;
+    padding: 10px;
+    width: 80px;
+    box-sizing: border-box;
+    background: #2e425c;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn {
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #FFF;
+    border: 0;
+    background: #33ac41;
+    border-radius: 5px;
+}
+
+output {
+    white-space: pre;
+    font-size: 1rem;
+    color: #FFF;
+    margin-top: 30px;
+    padding: 25px;
+    background: #1e2733;
+    border-radius: 5px;
+}
